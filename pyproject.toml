@@ -1,0 +1,14 @@
+[project]
+name = "utf-8-byte-boundary-detector"
+version = "0.1.0"
+description = "Counts trailing bytes required to finish an incomplete UTF-8 sequence in a partial buffer."
+requires-python = ">=3.10"
+dependencies = []
+readme = "README.md"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
