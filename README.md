@@ -30,3 +30,10 @@ A leading byte encodes the total sequence length in its high bits, but a
 continuation byte does not. If your buffer ends on a continuation byte with no
 leader visible, `completion_length` returns -1. Callers that always preserve
 the leading byte across chunk boundaries will not hit this.
+
+## Performance
+
+The window keeps a bounded buffer, so `push` is constant time and memory does not
+grow with the length of the stream. `peak` and `trough` are linear in the window
+size, which is the trade that keeps `push` cheap.
+
