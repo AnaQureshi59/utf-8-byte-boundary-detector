@@ -1,6 +1,6 @@
 [project]
 name = "utf-8-byte-boundary-detector"
-version = "0.1.1"
+version = "0.1.2"
 description = "Counts trailing bytes required to finish an incomplete UTF-8 sequence in a partial buffer."
 requires-python = ">=3.10"
 dependencies = []
